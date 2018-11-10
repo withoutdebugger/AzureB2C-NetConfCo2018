@@ -1,0 +1,15 @@
+﻿.bg-white {
+    background-color: #ffffff !important;
+}
+.navbar-header {
+    padding: 10px;
+}
+.navbar-brand {
+    padding: 5px; /* firefox bug fix */
+}
+
+.navbar-right > li > a {
+    color: #555555 !important;
+    font-weight: bold;
+    font-size: 1.5rem
+}
