@@ -1,5 +1,5 @@
 ﻿@using System.Security.Claims
-@{
+@{    
     ViewBag.Title = "Claims";
 }
 <h2>@ViewBag.Title</h2>
@@ -15,7 +15,7 @@
     @foreach (Claim claim in ClaimsPrincipal.Current.Claims)
     {
         <tr>
-            <td class="claim-type claim-data">@claim.Type</td>
+            <td class="claim-type claim-data"><strong>@claim.Type</strong></td>
             <td class="claim-data">@claim.Value</td>
         </tr>
     }

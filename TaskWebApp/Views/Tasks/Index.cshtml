@@ -1,15 +1,16 @@
 ﻿
 @{
+    
     ViewBag.Title = "To-Do List";
 }
 
-<h2>To-Do List</h2>
+<h2>Listado de Tareas</h2>
 
 @using (Html.BeginForm("Create", "Tasks", FormMethod.Post))
 {
     <div>
-        New Item: <input type="text" name="description">
-        <input type="submit" value="Add">
+        Nueva Tarea: <input type="text" name="description">
+        <input type="submit" value="Agregar">
     </div>
 }
 
@@ -18,7 +19,7 @@
 <table class="table table-bordered table-striped table-hover table-condensed" style="table-layout: auto">
 
     <tr>
-        <th>Items:</th>
+        <th>Tareas:</th>
     </tr>
 
     @foreach (var item in ViewBag.Tasks)
@@ -28,7 +29,7 @@
                 @using (Html.BeginForm("Delete", "Tasks", FormMethod.Post))
                 {
                     @item["Text"]
-                    <button name="id" value="@item["Id"]" style="float:right">Delete</button>
+                    <button name="id" value="@item["Id"]" style="float:right">Borrar</button>
                 }
             </td>
         </tr>
